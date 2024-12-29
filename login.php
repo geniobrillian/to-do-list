@@ -1,3 +1,32 @@
+<?php
+
+// Cek jika user sudah login
+if (isset($_SESSION['id_user'])) {
+    header('Location: dashboard.php'); // Redirect ke dashboard jika sudah login
+    exit;
+}
+// Inisialisasi variabel untuk pesan error
+$error = "";
+
+// Proses form login
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+
+    if (!empty($email) && !empty($password)) {
+        if (login($email, $password)) {
+            // Jika login berhasil, arahkan ke dashboard
+            header('Location: dashboard.php');
+            exit;
+        } else {
+            $error = "Email atau password salah!";
+        }
+    } else {
+        $error = "Semua kolom wajib diisi!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
