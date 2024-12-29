@@ -1,10 +1,14 @@
 <?php
+session_start();
+require 'includes/koneksi.php'; // Koneksi ke database
+require 'includes/auth.php'; // Memuat fungsi autentikasi
 
 // Cek jika user sudah login
 if (isset($_SESSION['id_user'])) {
     header('Location: dashboard.php'); // Redirect ke dashboard jika sudah login
     exit;
 }
+
 // Inisialisasi variabel untuk pesan error
 $error = "";
 
