@@ -1,5 +1,7 @@
 <?php
-
+session_start();
+require 'includes/koneksi.php'; // Koneksi ke database
+require 'includes/auth.php'; // Memuat fungsi autentikasi
 
 // Cek jika user sudah login
 if (isset($_SESSION['id_user'])) {
