@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 session_start();
 require 'includes/koneksi.php'; // Koneksi ke database
@@ -32,6 +33,8 @@ if (isset($_GET['status'])) {
     }
 }
 ?>
+=======
+>>>>>>> e26712c0b941ad9411b609ec0b1a11122c578bda
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -41,6 +44,7 @@ if (isset($_GET['status'])) {
     <link rel="stylesheet" href="assets/styles/dashboard.css">
 </head>
 
+<<<<<<< HEAD
     <!-- notifikasi berhasil add tugas dan notifikasi berhasil melakukan edit tugas-->
 <?php if (isset($_GET['status'])): ?>
     <script>
@@ -56,6 +60,8 @@ if (isset($_GET['status'])) {
     </script>
 <?php endif; ?>
 
+=======
+>>>>>>> e26712c0b941ad9411b609ec0b1a11122c578bda
 <body>
     <?php include 'includes/header.php'; ?>
 
@@ -79,6 +85,25 @@ if (isset($_GET['status'])) {
             </div>
             <button type="submit" name="tambah_tugas" class="btn btn-tambah">Tambah Tugas</button>
         </form>
+<<<<<<< HEAD
+=======
+        <div class="logout" id="logout">
+            <a href="logout.php">Logout</a>
+            <script>
+                //js untuk konfirmasi logout
+                document.getElementById("logout").addEventListener("click", function(event){
+                    const konfirmasi = confirm("Apakah anda yakin ingin logout?");
+
+                    if (!konfirmasi) {
+                        event.preventDefault();
+                        console.log("User membatalkan logout");
+                    } else {
+                        console.log("User mengkonfirmasi logout");
+                    }
+                });
+            </script>
+        </div>
+>>>>>>> e26712c0b941ad9411b609ec0b1a11122c578bda
 
         <!-- Daftar Tugas -->
         <h2>Daftar Tugas</h2>
@@ -125,4 +150,8 @@ if (isset($_GET['status'])) {
 
     <?php include 'includes/footer.php'; ?>
     </body>
+<<<<<<< HEAD
     </html>
+=======
+    </html>
+>>>>>>> e26712c0b941ad9411b609ec0b1a11122c578bda

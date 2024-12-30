@@ -1,3 +1,12 @@
+<?php
+session_start();
+// Jika pengguna sudah login, redirect ke dashboard
+if (isset($_SESSION['id_user'])) {
+    header('Location: dashboard.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
