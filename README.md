@@ -51,6 +51,9 @@ project_root/
 |      ├── index.css
 |      └── register.css
 │   
+├── db/
+│   └── to_do_list_db.sql # File yang berisi database
+|
 ├── includes/
 │   ├── koneksi.php       # File untuk koneksi database
 │   ├── auth.php          # File untuk fungsi autentikasi
