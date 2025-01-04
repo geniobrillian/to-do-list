@@ -79,22 +79,7 @@ if (isset($_GET['status'])) {
             </div>
             <button type="submit" name="tambah_tugas" class="btn btn-tambah">Tambah Tugas</button>
         </form>
-        <div class="logout" id="logout">
-                <a href="logout.php">Logout</a>
-                <script>
-                    //js untuk konfirmasi logout
-                    document.getElementById("logout").addEventListener("click", function(event){
-                        const konfirmasi = confirm("Apakah anda yakin ingin logout?");
 
-                        if (!konfirmasi) {
-                            event.preventDefault();
-                            console.log("User membatalkan logout");
-                        } else {
-                            console.log("User mengkonfirmasi logout");
-                        }
-                    });
-                </script>
-            </div>
         <!-- Daftar Tugas -->
         <h2>Daftar Tugas</h2>
         <table>
